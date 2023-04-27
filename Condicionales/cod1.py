@@ -1,11 +1,11 @@
-# Se pide al usuario que ingrese un valor a la variable "x" por consola 
+# Se asigna a la variable "x" el numero que ingrese el usuario por consola  
 x=int(input('ingrese numero')) 
-# Se pide al usuario que ingrese un valor a la variable "y" por consola 
+# Se asigna a la variable "y" el numero que ingrese el usuario por consola 
 y=int(input('ingrese numero'))
-# Se pide al usuario que ingrese un valor a la variable "z" por consola 
+# Se asigna a la variable "x" el numero que ingrese el usuario por consola 
 z=int(input('ingrese numero'))
 
-# Se crea una funcion donde si el valor de "x" es mayor al valor de "y" haga:
+# Se crea una funcion if donde si el valor de la variable "x" es mayor al valor de la variable "y" haga:
 if x>y:
     # Haga otra funcion. Como ya sabemos que "x" es mayor a "y" entonces comprovemos si "x"
     # es mayor a "z" 

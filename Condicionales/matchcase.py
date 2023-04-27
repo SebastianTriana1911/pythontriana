@@ -8,21 +8,21 @@ print('2-restar')
 print('3-multiplicar')
 print('4-dividir')
 print('5-residuo')
-# Se crea una variable para guardar el numero que ingreso el usuario dependiendo de la operacion que haya escogido
+# Se crea la variable "op" para guardar el numero que ingreso el usuario dependiendo de la operacion que haya escogido
 op=int(input('que operacion?'))
 # Se asigna una funcion match la cual es una manera mas corta y mas sencilla de trabajar las funciones if - elif - 
 # else, la funcion match case nos permite buscar todos los casos posibles segun la variable asignada con el match,
 # si dicha variable llega hacer match osea llega a coincidir con un case se ejecutara el codigo que tenga ese case
 match op:
-    # Case 1, significa que si el usuario ingresa a la variable op el numero 1, entonces la variable op hizo match con
-    # case 1 ya que a case se le asigno el valor 1 entonces si el valor de op y el valor de case son iguales se hira
+    # Case 1, significa que si el usuario ingresa a la variable "op" el numero 1, entonces la variable "op" hizo match con
+    # case 1 ya que a case se le asigno el valor 1 entonces si el valor de "op" y el valor de case son iguales se hira
     # por ese case 
     case 1:
-        # Siendo op igual a case 1 se le esta diciendo que muestre por pantalla la suma entre el valor asignado en 
+        # Siendo "op" igual a case 1 se le esta diciendo que muestre por pantalla la suma entre el valor asignado en 
         # la variable "num1" y "num2" por que como vimos anteriormete si el usuario marcaba un numero se le asignaba
         # la operacion que tuviera dicho numero y al numero 1 se le asigno la operacion suma 
         print(num1+num2)
-    # Se crea otro case para otra posible respuesta del usuario, por consiguiente un valor nuevo a la variable op,
+    # Se crea otro case para otra posible respuesta del usuario, por consiguiente un valor nuevo a la variable "op",
     # como al case se le asigno el numero 2, entonces si op = 2 se vendra por este case  
     case 2:
         # Ya que op = case 2 se le esta diciendo que muestre la resta entre los valores de la variable "num1" y "num2"
