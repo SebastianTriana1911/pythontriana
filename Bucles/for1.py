@@ -16,7 +16,7 @@ for i in range(11):
 # los parentecis de range, como el primer valor ya sabemos que es el numero en el que queremos que comience el ciclo, el segundo nos dire el
 # numero en el que queremos que termine
 for j in range(1,11):
-    
+
     # Nos mostrara por consola todos los numeros desde el 1 hasta el 11 en este caso
     print(j)
 
