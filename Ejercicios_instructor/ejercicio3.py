@@ -4,7 +4,9 @@
 x=int(input('ingrese numero'))
 y=int(input('ingrese numero'))
 z=int(input('ingrese numero'))
+
 #indentación
+
 if x>y:
     if x>z:
         print(f'el mayor es {x}')
