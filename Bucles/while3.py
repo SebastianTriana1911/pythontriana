@@ -1,6 +1,6 @@
-# Se asigna una variable que guarde el numero que el usuario va a ingresar
+# Se asigna a la variable "n" el valor que el usuario va a ingresar
 n=int(input('ingrese numero'))
-# Se asigna una variable que inicie en 1
+# Se asigna a variable "i" el valor 1
 i=1
 # Se crea un bucle donde si el valor asignado a la variable "i" es menor al numero que ingreso el usuario por pantalla se ejecute
 while i<n:
@@ -9,7 +9,7 @@ while i<n:
     if i%7==0:    
         # Tendra que imprimir que el valor de "i" es multiplo de 7
         print(f'{i} es multiplo de 7')
-    # Si el residuo de la el valor de "i" entre 7 no da un reiduo 0    
+    # Si el residuo de la el valor de "i" entre 7 no da un reiduo 0 se creara otra funcion que sera else donde 
     else:
         # Tendra que imprimir el valor que tenga actualmente "i"
         print(i)
