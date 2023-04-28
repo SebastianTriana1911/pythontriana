@@ -7,12 +7,13 @@ impar = 0
 
 for i in range (0,10):
     i = i + 1
-    par = par + i
-    impar = impar + i
-    resultado = par % 2
-    if resultado != 0:
-     par = par - i
-     break
-        
-print(f"La suma de los numeros pares es: {par}")
+    resultado = i % 2
+    if resultado == 0:
+     par = par + i 
+
+    elif resultado != 0:
+       impar = impar + i
+
+print (f"La suma de los numeros pares es: {par}")
 print(f"La suma de los numeros impares es: {impar}")
+    
