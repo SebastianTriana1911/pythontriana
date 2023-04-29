@@ -2,20 +2,20 @@
 # hasta el segundo.
 
 result = 0
-val = int(input("Escriba un numero entero pisitivo: "))
+val = int(input("Escriba un numero que sea positivo: "))
 
 if val <= 0:
-    print ("Le e pedido un numero entero positivo")
+    print ("El numero que ingreso no es positivo")
 else: 
-    val2 = int(input(f"Escriba un numero entero mayor a {val}: "))
+    val2 = int(input(f"Escriba un numero que sea mayor a {val}: "))
+
     if val2 <= val:
-        print ("Le e pedido un numero mayor")
+        print (f"EL numero que ingreso no es mayor a {val}")
     else:
         
         for i in range (val,val2 + 1):
             result = result + i
             
-
     print(f"La suma {val} + {val2} es = {result} ")
     
 
