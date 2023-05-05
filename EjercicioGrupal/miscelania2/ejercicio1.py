@@ -36,8 +36,21 @@ print (f"El numero mayor de la lista es: {mayor}")
 print (f"El numero menor de la lista es: {menor}")
 
 # Ordenar la lista de menor a mayor
-lista.sort()
+for i in range(longitud):
+    for j in range(i+1,longitud):
+        if lista[i]>lista[j]:
+            aux=lista[i]
+            lista[i]=lista[j]
+            lista[j]=aux
 print (f"La lista organizada de menor a mayor quedaria asi: {lista}")
+
+for i in range(longitud):
+    for j in range(i+1,longitud):
+        if lista[i]<lista[j]:
+            aux=lista[i]
+            lista[i]=lista[j]
+            lista[j]=aux
+print (f"La lista organizada de mayor a menor quedaria asi: {lista}")
 
 # Hallar la mediana de la lista 
 if longitud % 2 == 0:
