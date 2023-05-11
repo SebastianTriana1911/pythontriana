@@ -118,11 +118,12 @@ def posicion_lista (lista2):
 print (posicion_lista(lista2))
 
 # Buscar cuantas veces esta el numero que ingreso
-def veces_lista (lista):
+def veces_lista (lista2):
     cantidad = []
     cont = 0 
-    for y in lista:
-        if numero1 == lista[y]:
+    for y in range (len(lista2)):
+        if numero1 == lista2[y]:
             cont = cont + 1
-        cantidad.append(cont)
-    return f"Las veces que se encontro fue {cantidad}"
+        cantidad = cont
+    return f"Las veces que se encontro el numero {numero1} fue: {cantidad}"
+print(veces_lista(lista2))
