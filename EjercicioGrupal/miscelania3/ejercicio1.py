@@ -44,17 +44,6 @@ def menor_lista (lista):
     return menor
 print (f"El numero menor de la lista es: {menor_lista(lista2)}")
 
-# Organizar la lista de menor a mayor 
-def asendente (lista):
-    for t in range (len(lista)):
-        for y in range (t+1, len(lista)):
-            if lista[t] > lista[y]:
-                aux = lista[y]
-                lista[y] = lista[t]
-                lista[t] = aux
-    return lista
-print (f"La lista de menor a mayor: {asendente(lista2)}")
-
 # Organizar la lista de mayor a menor 
 def desendente (lista):
     for t in range (len(lista)):
@@ -65,6 +54,17 @@ def desendente (lista):
                 lista[t] = aux
     return lista
 print (f"La lista de mayor a menor: {desendente(lista2)}")
+
+# Organizar la lista de menor a mayor 
+def asendente (lista):
+    for t in range (len(lista)):
+        for y in range (t+1, len(lista)):
+            if lista[t] > lista[y]:
+                aux = lista[y]
+                lista[y] = lista[t]
+                lista[t] = aux
+    return lista
+print (f"La lista de menor a mayor: {asendente(lista2)}")
 
 # Hallar la moda de la lista
 def moda_lista (lista):
@@ -108,34 +108,21 @@ def buscar_lista (lista):
     return f"El numero {numero1} si esta"
 print (buscar_lista(lista2))
 
-# En qué posición(es) está, cuantas veces está
-def posicion_lista (lista):
-    for i in (len(lista)):
-        if numero1 == i:
-            indice = i
-    return f"El numero {numero1} se encontro en la posicion {indice}" 
-print (posicion_lista (lista2))
+# Buscar en qué posición está el numero que ingreso
+def posicion_lista (lista2):
+    posicion = []
+    for i in range (len(lista2)):
+        if numero1 == lista2[i]:
+            posicion.append (i)
+    return f"El numero se encuentra en la posicion {posicion}"
+print (posicion_lista(lista2))
 
-
-        
-#         if numero in lista:
-#             print(f"El numero {numero} si esta")    
-
-#         for n in lista:
-#             for j in lista:
-#                 posicion = cont1
-#             if numero == j:
-#                 lista2.append(posicion)
-#             cont1 += 1
-#             if posicion > len(lista):
-#                 break     
-
-#     for n in lista:
-#         cont=0
-#     for j in lista:
-#         posicion = cont1
-#         if numero == j:
-#             cont+=1
-#     if cont == 1:
-#     print(f"El numero {numero} no se repite")            
-# print(f"El numero {numero} esta {cont} veces")
+# Buscar cuantas veces esta el numero que ingreso
+def veces_lista (lista):
+    cantidad = []
+    cont = 0 
+    for y in lista:
+        if numero1 == lista[y]:
+            cont = cont + 1
+        cantidad.append(cont)
+    return f"Las veces que se encontro fue {cantidad}"
