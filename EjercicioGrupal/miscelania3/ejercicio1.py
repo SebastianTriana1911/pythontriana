@@ -7,9 +7,10 @@ import random
 # Agregar numeros aleatorios a una lista con una longitud aleatoria
 def num_random (tam,numero):
     lista = []
+    tam = random.randrange (10,20)
     lista = [random.randrange (numero) for w in range (tam)]
     return lista 
-lista2 = num_random(8,30)
+lista2 = num_random(15,30)
 print (lista2)
 
 # Hacer una suma con todos los elementos de la lista
@@ -81,3 +82,60 @@ def moda_lista (lista):
         return "no hay moda"
     return f"La moda de la lista es: {moda}"
 print(moda_lista(lista2))
+
+# Hallar la mediana en la lista
+def mediana_lista (lista):
+    if len(lista) % 2 == 0:
+        posicion = (len(lista) - 1) // 2    
+        posicion2 = (lista [posicion])
+        posicion3 = (lista [posicion + 1])
+        posicion = posicion2 + posicion3
+        posicion = posicion / 2
+    elif len(lista) % 2 != 0:
+        posicion = (len(lista) + 1) // 2
+        return f"La mediana de la lista es: {lista [posicion -1]}"
+    return f"La mediana de la lista es {posicion}"
+print (mediana_lista(lista2))
+
+# Buscar si se encuentra el número en la lista 
+numero1 = int(input("Ingrese un numero: "))
+def buscar_lista (lista):
+    while True:
+        if numero1 in lista:
+            break
+        else:
+            return f"El numero {numero1} no esta"
+    return f"El numero {numero1} si esta"
+print (buscar_lista(lista2))
+
+# En qué posición(es) está, cuantas veces está
+def posicion_lista (lista):
+    for i in (len(lista)):
+        if numero1 == i:
+            indice = i
+    return f"El numero {numero1} se encontro en la posicion {indice}" 
+print (posicion_lista (lista2))
+
+
+        
+#         if numero in lista:
+#             print(f"El numero {numero} si esta")    
+
+#         for n in lista:
+#             for j in lista:
+#                 posicion = cont1
+#             if numero == j:
+#                 lista2.append(posicion)
+#             cont1 += 1
+#             if posicion > len(lista):
+#                 break     
+
+#     for n in lista:
+#         cont=0
+#     for j in lista:
+#         posicion = cont1
+#         if numero == j:
+#             cont+=1
+#     if cont == 1:
+#     print(f"El numero {numero} no se repite")            
+# print(f"El numero {numero} esta {cont} veces")
