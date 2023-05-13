@@ -3,18 +3,19 @@
 import random
 
 lista = []
-tam = random.randrange(8,15)
+tam = 5
 aux = 0
 numero = 0
 acum = 0
+aux = 0
 for i in range (tam):
     numero = random.randrange(5,50)
     print (f"El numero es {numero}")
-    acum = numero
-    acum = acum + 10
-    print (f"acumulador {acum}")
-    if acum <= acum:
-        aux = numero
-        print (aux)
+    if numero >= aux:
+        decena = numero + 10
+        print (f"Decena del {numero} es {decena}")
+    if numero >= aux and numero <= decena:
         lista.append(numero)
+        aux = numero
+    
 print (lista)
