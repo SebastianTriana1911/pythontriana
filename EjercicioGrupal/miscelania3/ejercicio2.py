@@ -3,7 +3,7 @@ import random
 
 lista1 = []
 lista2 = []
-lista = [12,4,3,1,343]
+
 def llenarLista (lista):
     lista = []
     tam = random.randrange (5,15)
