@@ -1,4 +1,5 @@
 # Determinar los divisores de un numero introducido por el teclado
+# Para determinar si un numero es divisor de un numero el cociente de la divicion tiene que dar 0
 
 num1 = int(input("Ingrese un numero: "))
 result = 0

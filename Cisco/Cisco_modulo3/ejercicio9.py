@@ -2,12 +2,13 @@
 # desde el primero hasta el segundo diciendole cuales son par y cuales no 
 
 numero1 = int(input("Escriba un numero entero: "))
-numero2 = int(input(f"Escriba un numero mayor o igual a {numero1}: "))
+numero2 = int(input(f"Escriba un numero mayor a {numero1}: "))
 resultado = 0
 
-numero1 >= numero2
-
-for i in range (numero1, numero2, 1):
+if numero2 < numero1:
+      print (f"¡Le he pedido un número mayor o igual que {numero1} !")
+else:
+      for i in range (numero1, numero2, 1):
             i = i + 1
             resultado = i % 2
             if resultado == 0:
@@ -15,5 +16,3 @@ for i in range (numero1, numero2, 1):
             else:
                   print (f"El numero {i} es impar") 
                 
-numero1 < numero2
-print (f"¡Le he pedido un número mayor o igual que {numero1} !")
