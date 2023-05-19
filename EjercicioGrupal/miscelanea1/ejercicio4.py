@@ -1,21 +1,16 @@
-# Determine cuales y cuantos numeros perfectos hay entre 1 y 100
-
-result = 0 
+# Determine cuales y cuantos numeros perfectos hay entre 1 y 1000
+perf = 0
 cont = 0
-perfect = 0
-cont1 = 0
-num = 1
-for j in range (1,10):
-    print (f"j{j}")
-    for i in range (1,j):
-        print (f"i {i}")
-        result = j % i
-    
-        if result == 0:
-            perfect = perfect + i
+for i in range (1,1000):
+    perf = 0
+    for a in range (1,i):
+        resultado = i % a 
+        if resultado == 0:
+            perf = perf + a
 
-    if perfect == num:
-        print (f"El numero {num} es perfecto")
+    if perf == i:
+        cont = cont + 1
+        print (f"El numero {i} es perfecto")
+        
+print(f"Hay una cantidad de {cont} numeros perfectos")
     
-    else:
-        print (f"El numero {num} no es perfecto") 
