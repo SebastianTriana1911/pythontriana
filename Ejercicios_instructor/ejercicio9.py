@@ -11,7 +11,7 @@ for i in range (longitud):
     tupla = tupla + (numeros,)
 print(tupla)
 
-posicion = ((len(tupla) // 2)) + 1
-print (posicion)
+# posicion = ((len(tupla) // 2)) + 1
+# print (posicion)
 
 
