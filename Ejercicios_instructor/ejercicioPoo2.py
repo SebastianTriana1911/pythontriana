@@ -8,35 +8,31 @@ class Curso():
     def getCursos (self):
         return self.__curso
     
-    def busCursos (self,curso1):
-        self. curso1 = curso1
+    def busCursos (self,curso):
+        self.curso = curso
         for i in (self.__curso):
-            if curso1 == i:
-                return f"{curso1} si esta en la lista"
+            if curso == i:
+                return f"{curso} si esta en la lista"
         else:
-            return f"{curso1} no se encuentra en la lista"
+            return f"{curso} no se encuentra en la lista"
         
-    def elimCurso (self,curso2):
+    def elimCurso (self,curso):
+        self.curso = curso
+        for i in (self.__curso):
+            if curso == i:
+                self.__curso.remove(curso)
+                return self.__curso
+        else:
+            return f"{curso} no se remueve de la lista por que no existe dicho curso"
+        
+    def modCurso (self,curso1,curso2):
+        self.curso1 = curso1
         self.curso2 = curso2
-        for i in (self.__curso):
-            if curso2 == i:
-                return self.__curso.remove(curso2)
-        else:
-            return f"{curso2} no se remover de la lista por que no existe dicho curso"
-        
-    # def modCurso (self,cursoBuscar,cursoNUevo):
-        # self.cursoBuscar = cursoBuscar
-        # self.cursoNUevo = cursoNUevo
-        # for i in (self.__curso):
-            # if self.__curso[i] == cursoBuscar:
-                # cursoBuscar == cursoNUevo
-                # cursoBuscar == self.__curso[i]
-                # return self.__curso
-        # else:
-            # return f"{cursoNUevo} no se modificart el curso de la lista por que no existe dicho curso"
-        
-        
-        
+        for i in range (len(self.__curso)):
+            if curso1 == self.__curso[i]:
+                self.__curso[i] = curso2
+        return self.__curso
+    
 p = Curso()
 p.ingCurso("primero")
 p.ingCurso("segundo")
@@ -46,6 +42,7 @@ p.ingCurso("quinto")
 print (p.getCursos())
 print(p.busCursos("primero"))
 print(p.elimCurso("tercero"))
-print(p.getCursos())
-#print(p.modCurso("segundo", "seg"))
+print (p.modCurso("segundo", "segundoo"))
+
+
 
