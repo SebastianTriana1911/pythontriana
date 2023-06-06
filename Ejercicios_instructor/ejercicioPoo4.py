@@ -49,7 +49,6 @@ class Empleador:
 
 a = Empleador("Sebas","Profesor", 1160000)
 b = Empleador("Andres","Doctor", 2000000)
-c = Empleador("Samuel","Docente", 5000000)
 print(a.getNombre())
 print(a.getCargo())
 print(a.getSalario())

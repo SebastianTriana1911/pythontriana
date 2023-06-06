@@ -36,7 +36,3 @@ def invertir_lista(lista):
     for i in range(len(lista) - 1, -1, -1):
         lista_invertida.append(lista[i])
     return lista_invertida
-
-lista = llenarList(lista,10,10)
-print (lista)
-print (sumar_elementos(lista))
