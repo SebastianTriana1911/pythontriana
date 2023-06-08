@@ -10,8 +10,3 @@ for i in range (longitud):
     numeros = random.randrange (1,100)
     tupla = tupla + (numeros,)
 print(tupla)
-
-# posicion = ((len(tupla) // 2)) + 1
-# print (posicion)
-
-

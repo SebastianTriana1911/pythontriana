@@ -1,9 +1,9 @@
 # El ejercicio 3 constara de un codigo donde se determine el mayor de 3 numero ingresados
 # por el usuario con la funcion if - elif - else
 
-x=int(input('ingrese numero'))
-y=int(input('ingrese numero'))
-z=int(input('ingrese numero'))
+x=int(input('ingrese numero: '))
+y=int(input('ingrese numero: '))
+z=int(input('ingrese numero: '))
 
 #indentación
 
