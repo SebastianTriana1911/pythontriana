@@ -29,12 +29,14 @@ class Empleador:
         else:
             ipc = self.__salario * 13.12 / 100
             self.__salario = self.__salario + ipc
+            Empleador.suma = Empleador.suma + ipc
         return f"El salario de {self.__nombre} con ipc es de: ${round (self.__salario)}"
     
     def extrasTotal (self,horas):
         if horas <= 40:
             resultado = horas * 4833
             self.__salario = self.__salario + resultado
+            Empleador.suma = Empleador.suma + resultado 
             return f"El salario de {self.__nombre} con horas extras es de: ${round (self.__salario)}"
         else:
             return f"El salario que acaba de ingresar como horas extras no es valido"

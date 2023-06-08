@@ -4,7 +4,7 @@
 # el numero que ingrese el igual al numero escogido por el programa se le dira felicitaciones. 
 
 from random import randint
-incognita = randint (0,10)
+incognita = randint (0,100)
 
 while True:
     numero = int(input("Ingrese un numero: "))
