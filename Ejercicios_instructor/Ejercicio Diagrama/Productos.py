@@ -12,5 +12,5 @@ class Producto:
     
     def descuentoProducto (self,precio):
         self.__precio = precio
-        precio = self.__precio * 0.35
+        precio = self.__precio * 0.03
         return f"El precio con descuento para un individual es: {precio} "
