@@ -1,37 +1,40 @@
 from Cliente import *
 from Productos import *
+
 class Individual(Cliente):
-    def __init__(self,id,nombre,tipo,descripcion,email,telefono,direccion):
-        super().__init__(id,nombre,tipo,descripcion)
+    def __init__(self,id,nombre,tipo,email,telefono):
+        super().__init__(id,nombre,tipo,)
         self.__id = id
         self.__nombre = nombre
         self.__tipo = tipo
-        self.__descripcion = descripcion
         self.__email = email
         self.__telefono = telefono
-        self.__direccion = direccion
-        self.__productos = []
-        #self.__precio= precio
         
-    def getDatos(self):
-        return f"{self.__id},{self.__nombre},{self.__tipo},{self.__descripcion},{self.__email},{self.__telefono}" 
+    def getDatosIndividual (self):
+        return f"Señor {self.__nombre}, su id es {self.__id}, usted es de tipo {self.__tipo}, su correo es {self.__email}, y su numero de contacto {self.__telefono}" 
     
     def setId (self,id):
         self.__id = id
-        return f"Su nuevo id es: {self.__id}"
+        return f"Su id cambio a ser {self.__id}"
     
-    def agregarProducto (self,producto):
-        self.__productos.append(producto)
+    def setNom (self,nombre):
+        self.__nombre = nombre
+        return f"Su nombre cambio a ser {self.__nombre}"
+    
+    def setTipo (self,tipo):
+        self.__tipo = tipo
+        return f"Su tipo cambio a ser {self.__tipo}"
+    
+    def setEmail (self,email):
+        self.__email = email
+        return f"Usted cambio si email por {self.__email}"
+    
+    def setTel (self,telefono):
+        self.__telefono = telefono
+        return f"Su telefono es {self.__telefono}"
 
-    def componerProducto(self,id,nombre,tipo,descripcion,precio):
-        ob3 = Producto(id,nombre,tipo,descripcion,precio)
-        self.__productos.append(ob3)    
-
-    def descuentoProducto (self,precio):
+    def descuentoProducto (self,producto,precio):
         self.__precio = precio
-        descuento = self.__precio * 0.03
+        descuento = self.__precio * 0.035
         self.__precio = self.__precio - descuento
-        return f"El precio con descuento para un individual es: {self.__precio} "
-    
-    def getProductosList(self):
-        return self.__productos
+        return f"Por ser un cliente Individual el producto \"{producto}\" te quedara en {self.__precio} "
