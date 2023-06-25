@@ -1,9 +1,9 @@
 class Ubicacion:
-    def __init__ (self,codigoDepartamento,codigoMunicipio,nombreDepartamento,nombreMunicipio):
-        self.__codigoDepartamento = codigoDepartamento
-        self.__codigoMunicipio = codigoMunicipio
-        self.__nombreDepartamento = nombreDepartamento
-        self.__nombreMunicipio = nombreMunicipio
+    def __init__ (self):
+        self.__codigoDepartamento = int(input("Ingrese el codigo del departamento: "))
+        self.__codigoMunicipio = int(input("Ingrese el codigo del municipio: "))
+        self.__nombreDepartamento = input("Ingrese el nombre del departamento: ")
+        self.__nombreMunicipio = input("Ingrese el nombre del municipio: ")
 
     def getDatosUbicacion (self):
         return f"""Los datos de la ubicacion son:

@@ -13,4 +13,5 @@ class Ocupacion:
         FechaInscripcion: {self.__fechaInscripcion}
         Cargo: {self.__cargo}
         Candidatos Requeridos: {self.__candidatosRequeridos}"""
+
     

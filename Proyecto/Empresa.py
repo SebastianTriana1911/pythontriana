@@ -1,5 +1,8 @@
 from Usuario import *
 from Ocupacion import *
+from Ubicacion import *
+from Vacante import *
+
 class Empresa (Usuario):
     empresasCreadas = []
     def __init__ (self,nombre):
@@ -11,11 +14,16 @@ class Empresa (Usuario):
         self.__tipo = input ("Ingrese de que tipo es su empresa: ")
         self.__direccion = input ("Ingrese la direccion de su empresa: ")
         Empresa.empresasCreadas.append (self)
-        Ocupacion.ocupacionEmpresa
+        self.__empresaOcupacion = []
+        self.__empresaUbicacion = []
+        self.__empresaVacante = []
         
     
     def getNombre(self):
         return super().getNombre()
+    
+    def getId (self):
+        return self.__id
     
     def getDatosEmpresa (self):
         return f"""Sus datos como empresa {self.getNombre()} serian 
@@ -31,4 +39,25 @@ Direccion: {self.__direccion}"""
         cont = 0
         for i in Empresa.empresasCreadas:
             cont = cont + 1 
-            print (f"{cont}: {Empresa.getDatosEmpresa(i)}")
+            print (f"{cont}: {i.getId()}")
+
+    def agregarOcupacion (self,ocupacion):
+        self.__empresaOcupacion.append(ocupacion)
+    
+    def getListOcupacion (self):
+        for i in self.__empresaOcupacion:
+            print (i.getDatosOcupacion())
+
+    def agregarUbicacion (self,ubicacion):
+        self.__empresaUbicacion.append(ubicacion)
+
+    def getListUbicacion (self):
+        for i in self.__empresaUbicacion:
+            print (i.getDatosUbicacion())
+    
+    def agregarVacante (self,vacante):
+        self.__empresaVacante.append(vacante)
+
+    def getListVacante (self):
+        for i in self.__empresaVacante:
+            print (i.getDatosVacantes())
