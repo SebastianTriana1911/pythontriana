@@ -104,6 +104,8 @@ print ()
 sena.componerProducto(10,"Computador","Electronico","...",1500000)
 for producto in sena.getProductosList():
     print(producto.getProducto())
+print(sena.descuentoProducto("Ctadompuor",1500000))
 
-print(sena.descuentoProducto("Computador",1500000))
+
+
 
