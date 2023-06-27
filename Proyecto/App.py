@@ -10,11 +10,9 @@ print ("""Seleccione segun el numero\n
 """)
 
 usuario = input("Que tipo de usuario es: ")
-
-match usuario:
-    case "1":
-        print ("persona")
-    case  "2":
+if usuario == "1":
+    print ("persona") 
+elif usuario == "2":
         salir = True
         while salir:
             print ("""\nOpciones que puede hacer como empresa:
@@ -34,45 +32,42 @@ match usuario:
                     if idEmpresa == i.getId():
                         empresaUso = i 
                         print (f"Bienvenido empresa {i.getNombre()}")
-                        salir = False 
+                    if idEmpresa :
+                        continue
+                    salir = False 
                     
-                    salir = True
-                    while salir:
-                        print ("""\nEstas son las opciones que puede hacer ya creo una empresa: 
-                        1. Ver datos de su empresa
-                        2. Ingresar Ocupacion
-                        3. Ver datos de la ocupacion
-                        4. Ingresar Ubicacion
-                        5. Ver datos de la ubicacion
-                        6. Crear una vacante
-                        7. Ver datos vacante
-                        11. Salir
-                        """) 
-                        opcion = input("Que opcion desea realizar: ")
-
-                        if opcion == "1":
-                            print(empresa.getDatosEmpresa())
-
-                        if opcion == "2":
-                            ocu = Ocupacion()
-                            empresa.agregarOcupacion(ocu)
-
-                        if opcion == "3":
-                            empresa.getListOcupacion()
-
-                        if opcion == "4":
-                            ubi = Ubicacion()
-                            empresa.agregarUbicacion(ubi) 
-
-                        if opcion == "5":
-                            empresa.getListUbicacion()
-
-                        if opcion == "6":
-                            vac = Vacante ()
-                            empresa.agregarVacante(vac)
-
-                        if opcion == "7":
-                            empresa.getListVacante()
-
-                        if opcion == "11":
-                            salir = False
+                salir = True
+                while salir:
+                    print ("""\nEstas son las opciones que puede hacer ya creo una empresa: 
+                    1. Ver datos de su empresa
+                    2. Ingresar Ocupacion
+                    3. Ver datos de la ocupacion
+                    4. Ingresar Ubicacion
+                    5. Ver datos de la ubicacion
+                    6. Crear una vacante
+                    7. Ver datos vacante
+                    11. Salir
+                    """) 
+                    opcion = input("Que opcion desea realizar: ")
+                    if opcion == "1":
+                        print(empresa.getDatosEmpresa())
+                    if opcion == "2":
+                        ocu = Ocupacion()
+                        empresa.agregarOcupacion(ocu)
+                    if opcion == "3":
+                        empresa.getListOcupacion()
+                    if opcion == "4":
+                        ubi = Ubicacion()
+                        empresa.agregarUbicacion(ubi) 
+                    if opcion == "5":
+                        empresa.getListUbicacion()
+                    if opcion == "6":
+                        vac = Vacante ()
+                        empresa.agregarVacante(vac)
+                    if opcion == "7":
+                        empresa.getListVacante()
+                    if opcion == "11":
+                        salir = False
+else:
+    print ("Lo que acaba de ingresar no es una opcion en el sistema")
+    
